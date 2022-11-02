@@ -12,7 +12,7 @@ void startOperatorsLesson()
     int option = 0;
     do
     {
-        printf("\nChoose which data type you would like to see the stats for:");
+        printf("\nChoose which operator you would like to get more explanation:");
         green();
         printf("\n\t 1. Arithmetic Operators");
         printf("\n\t 2. Increment and Decrement");
