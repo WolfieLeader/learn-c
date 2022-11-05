@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "./DataTypes/index.c"
 #include "./Operators/index.c"
+#include "./Structures/index.c"
 
 int main(void)
 {
@@ -17,6 +18,7 @@ int main(void)
         green();
         printf("\n\t 1. Data Types");
         printf("\n\t 2. Operators");
+        printf("\n\t 3. Structures");
         reset();
         printf("\n\t To exit, enter any other number.");
         printf("\n Your choice: ");
@@ -30,12 +32,15 @@ int main(void)
         case 2:
             startOperatorsLesson();
             break;
+        case 3:
+            startStructuresLesson();
+            break;
         default:
             red();
             printf("Exiting...\n");
             reset();
             break;
         }
-    } while (topic == 1 || topic == 2);
+    } while (topic >= 1 || topic <= 3);
     return 0;
 }
