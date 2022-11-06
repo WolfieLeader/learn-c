@@ -2,11 +2,12 @@
 #include "./DataTypes/index.c"
 #include "./Operators/index.c"
 #include "./Structures/index.c"
+#include "./Pointers/index.c"
+#include "./Allocation/index.c"
 
 int main(void)
 {
     int topic = 0;
-    int subject = 0;
 
     red();
     bright();
@@ -19,6 +20,8 @@ int main(void)
         printf("\n\t 1. Data Types");
         printf("\n\t 2. Operators");
         printf("\n\t 3. Structures");
+        printf("\n\t 4. Pointers And Memory Addresses");
+        printf("\n\t 5. Memory Allocation");
         reset();
         printf("\n\t To exit, enter any other number.");
         printf("\n Your choice: ");
@@ -35,12 +38,18 @@ int main(void)
         case 3:
             startStructuresLesson();
             break;
+        case 4:
+            startPointersLesson();
+            break;
+        case 5:
+            startAllocationLesson();
+            break;
         default:
             red();
             printf("Exiting...\n");
             reset();
             break;
         }
-    } while (topic >= 1 || topic <= 3);
+    } while (topic >= 1 && topic <= 5);
     return 0;
 }
